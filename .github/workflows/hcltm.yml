@@ -1,9 +1,6 @@
 name: testing hcltm-action
 
-on:
-  push:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   hcltm-validate:
