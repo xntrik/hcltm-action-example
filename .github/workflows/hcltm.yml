@@ -1,4 +1,4 @@
-name: testing hcltm-action
+name: hcltm validate
 
 on: [push, pull_request]
 
