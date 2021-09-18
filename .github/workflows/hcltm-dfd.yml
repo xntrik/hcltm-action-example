@@ -1,15 +1,19 @@
-name: hcltm validate
+name: hcltm dfd
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  hcltm-validate:
+  hcltm-dashboard:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: hcltm validate
+      - name: HCLTM DFD
         uses: xntrik/hcltm-action@v0.0.3
         with:
-          command: 'validate'
+          command: 'dfd'
           files: './hcl-files/*'
+          outdir: './dfd'
