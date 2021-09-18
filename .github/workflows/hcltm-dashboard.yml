@@ -22,3 +22,9 @@ jobs:
           command: 'dashboard'
           files: './hcl-files/*'
           outdir: './dashboard'
+      - name: Commit dashboard
+        run: |
+          git config --global user.name "HCLTM Git Action"
+          git config --global user.email "xntrik@users.noreply.github.com"
+          git commit -am "Automated updated dashboard"
+          git push
