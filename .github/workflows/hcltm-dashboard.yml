@@ -6,18 +6,19 @@ on:
       - main
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: HCLTM Validate
-      uses: xntrik/hcltm-action@v0.0.2
-      with:
-        command: 'validate'
-        files: './hcl-files/*'
-    - name: HCLTM Dashboard
-      uses: xntrik/hcltm-action@v0.0.2
-      with:
-        command: 'dashboard'
-        files: './hcl-files/*'
-        outdir: './dashboard'
+  hcltm-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: HCLTM Validate
+        uses: xntrik/hcltm-action@v0.0.2
+        with:
+          command: 'validate'
+          files: './hcl-files/*'
+      - name: HCLTM Dashboard
+        uses: xntrik/hcltm-action@v0.0.2
+        with:
+          command: 'dashboard'
+          files: './hcl-files/*'
+          outdir: './dashboard'
