@@ -1,7 +1,7 @@
 spec_version = "0.0.3"
 
 threatmodel "Tower of London" {
-o
+ author = "blep"
 }
 
 threatmodel "Tower of London" {
