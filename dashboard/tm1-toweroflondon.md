@@ -31,7 +31,6 @@ Someone who isn't the Queen steals the crown
 
 > Impact Type: Confidentiality
 
-
 #### Control
 
 Lots of guards

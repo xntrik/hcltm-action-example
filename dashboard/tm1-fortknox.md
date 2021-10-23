@@ -31,7 +31,6 @@ Someone steals the gold
 
 > Impact Type: Confidentiality
 
-
 #### Control
 
 Big walls
