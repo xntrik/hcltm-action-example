@@ -12,16 +12,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: HCLTM Validate
-        uses: xntrik/hcltm-action@v0.0.4
+        uses: xntrik/hcltm-action@dev
         with:
           command: 'validate'
           files: './hcl-files/*'
       - name: HCLTM Dashboard
-        uses: xntrik/hcltm-action@v0.0.4
+        uses: xntrik/hcltm-action@dev
         with:
           command: 'dashboard'
           files: './hcl-files/*'
           outdir: './dashboard'
+      - name: HCLTM Custom Dashboard
+        uses: xntrik/hcltm-action@dev
+        with:
+          command: 'dashboard'
+          files: './hcl-files/*'
+          outdir: './custom-dashboard'
+          dashboard-template: './templates/dashboard-template.tpl'
+          dashboard-filename: 'db'
+          threatmodel-template: './templates/threatmodel-template.tpl'
+      - name: HCLTM Custom HTML Dashboard
+        uses: xntrik/hcltm-action@dev
+        with:
+          command: 'dashboard'
+          files: './hcl-files/*'
+          outdir: './html-dashboard'
+          dashboard-template: './templates/dashboard-template-html.tpl'
+          dashboard-filename: 'index'
+          threatmodel-template: './templates/threatmodel-template-html.tpl'
+          dashboard-html: 'true'
       - name: Commit dashboard
         run: |
           git config --global user.name "HCLTM Git Action"
