@@ -12,20 +12,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: HCLTM DFD
-        uses: xntrik/hcltm-action@v0.0.8
+        uses: xntrik/hcltm-action@v0.0.9
         with:
           command: 'dfd'
           files: './hcl-files/*'
           outdir: './dfd'
       - name: HCLTM DFD DOT
-        uses: xntrik/hcltm-action@v0.0.8
+        uses: xntrik/hcltm-action@v0.0.9
         with:
           command: 'dfd'
           files: './hcl-files/*'
           outdir: './dfd-dot'
           dfd-type: 'dot'
       - name: HCLTM DFD SVG 
-        uses: xntrik/hcltm-action@v0.0.8
+        uses: xntrik/hcltm-action@v0.0.9
         with:
           command: 'dfd'
           files: './hcl-files/*'
