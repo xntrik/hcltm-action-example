@@ -6,7 +6,10 @@
 
    threat {
      description = "threaty threat"
-     control = import.control.control_name.description
+     expanded_control "control name" {
+      description = import.control.control_name.description
+      risk_reduction = 40
+     }
      stride = ["Spoofing", "Elevation of privilege"]
    }
 
