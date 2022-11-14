@@ -23,7 +23,6 @@ A historic castle
 including the imperial state crown
 
 
-
 ## Threat Scenarios
 
 ### Threat
@@ -32,9 +31,10 @@ Someone who isn't the Queen steals the crown
 
 > Impact Type: Confidentiality
 
-#### Control
+#### Legacy Control Description
 
 Lots of guards
+
 ## Third Party Dependencies
 
 ### community watch

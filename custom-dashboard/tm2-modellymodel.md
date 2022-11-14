@@ -12,7 +12,3 @@ threaty threat
 
 > STRIDE: Spoofing, Elevation Of Privilege
 
-#### Control
-
-SOMETHING HUGELY IMPORTANT HERE IN ANOTHER FOLDER
-

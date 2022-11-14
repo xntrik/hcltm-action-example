@@ -12,7 +12,15 @@ threaty threat
 
 > STRIDE: Spoofing, Elevation Of Privilege
 
-#### Control
+#### Controls
+
+##### control name
+
+> Implemented: ❌
 
 SOMETHING HUGELY IMPORTANT HERE IN ANOTHER FOLDER
+
+|    |    |
+| -- | -- |
+| Risk Reduction | 40 |
 

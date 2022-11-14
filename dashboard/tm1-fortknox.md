@@ -23,7 +23,6 @@ A .. fort?
 Lots of gold
 
 
-
 ## Threat Scenarios
 
 ### Threat
@@ -32,7 +31,7 @@ Someone steals the gold
 
 > Impact Type: Confidentiality
 
-#### Control
+#### Legacy Control Description
 
 Big walls
 
