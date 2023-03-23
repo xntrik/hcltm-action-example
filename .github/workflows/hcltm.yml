@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: hcltm validate
-        uses: xntrik/hcltm-action@v0.0.9
+        uses: xntrik/hcltm-action@v0.0.10
         with:
           command: 'validate'
           files: './hcl-files/*'
