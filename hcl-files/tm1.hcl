@@ -58,3 +58,9 @@ threatmodel "Fort Knox" {
   }
 
 }
+
+threatmodel "A new TM" {
+  author = "@xntrik"
+
+  description = "TODO"
+}
