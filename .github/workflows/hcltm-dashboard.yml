@@ -1,4 +1,4 @@
-name: hcltm dashboard
+name: hcltm dashboard and export
 
 on:
   push:
@@ -12,18 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: HCLTM Validate
-        uses: xntrik/hcltm-action@v0.0.12
+        uses: xntrik/hcltm-action@v0.0.13
         with:
           command: 'validate'
           files: './hcl-files/*'
       - name: HCLTM Dashboard
-        uses: xntrik/hcltm-action@v0.0.12
+        uses: xntrik/hcltm-action@v0.0.13
         with:
           command: 'dashboard'
           files: './hcl-files/*'
           outdir: './dashboard'
       - name: HCLTM Custom Dashboard
-        uses: xntrik/hcltm-action@v0.0.12
+        uses: xntrik/hcltm-action@v0.0.13
         with:
           command: 'dashboard'
           files: './hcl-files/*'
@@ -32,7 +32,7 @@ jobs:
           dashboard-filename: 'db'
           threatmodel-template: './templates/threatmodel-template.tpl'
       - name: HCLTM Custom HTML Dashboard
-        uses: xntrik/hcltm-action@v0.0.12
+        uses: xntrik/hcltm-action@v0.0.13
         with:
           command: 'dashboard'
           files: './hcl-files/*'
@@ -41,12 +41,20 @@ jobs:
           dashboard-filename: 'index'
           threatmodel-template: './templates/threatmodel-template-html.tpl'
           dashboard-html: 'true'
-      - name: Commit dashboard
+      - name: HCLTM export
+        uses: xntrik/hcltm-action@v0.0.13
+        with:
+          command: 'export'
+          files: './hcl-files/*'
+          export-format: 'otm'
+          export-output: './otm/otm.json'
+      - name: Commit changes
         run: |
           git config --global user.name "HCLTM Git Action"
           git config --global user.email "xntrik@users.noreply.github.com"
           git add ./dashboard/*
           git add ./html-dashboard/*
           git add ./custom-dashboard/*
-          git commit -m "Automated updated dashboard"
+          git add ./otm/*
+          git commit -m "Automated updated dashboard and export"
           git push
