@@ -20,6 +20,7 @@ jobs:
         uses: xntrik/hcltm-action@v0.0.12
         with:
           command: 'export'
+          files: './hcl-files/*'
           export-format: 'otm'
           export-output: './otm/otm.json'
       - name: Commit OTM export
