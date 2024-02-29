@@ -1,0 +1,31 @@
+name: hcltm export
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hcltm-export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: HCLTM validate
+        uses: xntrik/hcltm-action@v0.0.11
+        with:
+          command: 'validate'
+          files: './hcl-files/*'
+      - name: HCLTM export
+        uses: xntrik/hcltm-action@v0.0.11
+        with:
+          command: 'export'
+          export-format: 'otm'
+          export-output: './otm/otm.json'
+      - name: Commit OTM export
+        run: |
+          git config --global user.name "HCLTM Git Action"
+          git config --global user.email "xntrik@users.noreply.github.com"
+          git add ./otm/*
+          git commit -m "Automated updated OTM export"
+          git push
