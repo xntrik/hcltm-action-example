@@ -12,12 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: HCLTM validate
-        uses: xntrik/hcltm-action@v0.0.11
+        uses: xntrik/hcltm-action@v0.0.12
         with:
           command: 'validate'
           files: './hcl-files/*'
       - name: HCLTM export
-        uses: xntrik/hcltm-action@v0.0.11
+        uses: xntrik/hcltm-action@v0.0.12
         with:
           command: 'export'
           export-format: 'otm'
